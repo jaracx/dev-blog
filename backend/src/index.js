@@ -3,13 +3,10 @@ import cors from "cors";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-require("dotenv").config();
+import "dotenv/config";
 
 // 1. Inicialización y constantes
 const app = express();
-const PORT = process.env.PORT || 3000;
-require('dotenv').config();
-
 const PORT = process.env.PORT || 3000;
 const ADMIN_SECRET = process.env.ADMIN_SECRET;
 if (!ADMIN_SECRET) {
