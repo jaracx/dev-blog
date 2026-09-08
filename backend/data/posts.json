@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "slug": "construyendo-un-cli-en-nodejs-sin-librerias",
+    "title": "Construyendo un CLI de GitHub en Node.js sin librerías externas",
+    "category": "Backend",
+    "isPrivate": false,
+    "date": "2026-09-05",
+    "summary": "Cómo interactuar con la API pública de GitHub usando fetch nativo.",
+    "content": "Contenido del post..."
+  },
+  {
+    "id": "2",
+    "slug": "notas-soporte-redes-internas",
+    "title": "Procedimiento interno de reseteo de switches",
+    "category": "Soporte",
+    "isPrivate": true,
+    "date": "2026-09-05",
+    "summary": "Notas privadas de infraestructura y contraseñas por defecto.",
+    "content": "Información confidencial solo para mí..."
+  },
+  {
+    "id": "3",
+    "slug": "sistemas-de-ecuaciones-y-matrices",
+    "title": "Álgebra: Sistemas de Ecuaciones y Eliminación Gaussiana",
+    "category": "Facultad",
+    "isPrivate": false,
+    "date": "2026-09-07",
+    "summary": "Repaso de pivoteo, matriz escalonada y clasificación según Teorema de Rouché-Frobenius.",
+    "content": "## Clasificación de Sistemas\n\nDado un sistema matricial $A x = b$:\n- **Compatible Determinado (SCD):** Solución única (rango(A) = rango(A|b) = n).\n- **Compatible Indeterminado (SCI):** Infinitas soluciones (rango(A) = rango(A|b) < n).\n- **Incompatible (SI):** Sin solución (rango(A) < rango(A|b)).\n\n### Pasos para Eliminación Gaussiana\n1. Armar la matriz ampliada $[A | b]$.\n2. Hacer ceros debajo del pivote con operaciones elementales de fila.\n3. Despejar variables por sustitución hacia atrás."
+  }
+]

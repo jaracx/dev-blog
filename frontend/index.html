@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev & Support Log</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- KaTeX para fórmulas matemáticas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <!-- Marked para parsear Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h1 id="site-title" style="cursor: pointer;">Bitácora Técnica</h1>
+        <button id="admin-btn" class="btn-secondary">Modo Admin</button>
+      </div>
+      <p class="subtitle">Desarrollo backend, notas IT y apuntes de facultad.</p>
+    </header>
+
+    <main>
+      <div id="loading" class="state-message">Cargando...</div>
+      <div id="error" class="state-message error hidden"></div>
+
+      <!-- Formulario para crear post (solo visible en modo admin) -->
+      <section id="create-post-section" class="post-form-card hidden">
+        <h2>Nuevo Artículo / Apunte</h2>
+        <form id="new-post-form">
+          <div class="form-group">
+            <label for="post-title-input">Título</label>
+            <input type="text" id="post-title-input" required placeholder="Ej: Álgebra: Espacios Vectoriales">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="post-category-select">Categoría</label>
+              <select id="post-category-select">
+                <option value="Facultad">Facultad</option>
+                <option value="Backend">Backend</option>
+                <option value="Soporte">Soporte</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="post-private-check">
+                Marcar como Privado
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="post-summary-input">Resumen breve</label>
+            <input type="text" id="post-summary-input" placeholder="Breve descripción para la tarjeta">
+          </div>
+
+          <div class="form-group">
+            <label for="post-content-input">Contenido (Markdown)</label>
+            <textarea id="post-content-input" rows="8" required placeholder="Escribí acá tus apuntes usando Markdown o fórmulas..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Publicar Entrada</button>
+        </form>
+      </section>
+      <!-- Vista de lista -->
+      <section id="posts-container" class="posts-grid"></section>
+
+      <!-- Vista de post individual -->
+      <article id="post-view" class="post-full hidden">
+        <button id="back-btn" class="btn-secondary">← Volver al listado</button>
+        <div id="post-detail-content"></div>
+      </article>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
